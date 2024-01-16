@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ 
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(223, 166, 222);
+        }
+        tbody{
+            background-color: rgb(248, 212, 241);
+        }
+        thead{
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+
+        {% for category, message in messages %}
+            <div class="alert alert-{{category}}">{{ message }}</div>
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
+    <div class="main">
+       <center> <h1>Register RECORD<hr></h1></center>
+
+  
+        <div align="center"class="table">
+            <br>
+
+        
+       <table class="table table-border" >
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Position</th>
+                
+                <th>Address</th>
+                <th>DOB</th>
+                <th>Education</th>
+                <th>Institution</th>
+                <th>Grade</th>
+                <th>Work</th>
+                
+ 
+            </tr>
+        </thead>
+       <tbody>
+        {% for res in data %}
+        {%set i=loop.index %}
+        <tr>
+            <td>{{i}}</td>
+            <td>{{res["fname"]}}</td>
+            <td>{{res["pos"]}}</td>
+            <td>{{res["address"]}}</td>
+            <td>{{res["dob"]}}</td>
+            <td>{{res["edu"]}}</td>
+            <td>{{res["inst"]}}</td>
+            <td>{{res["Grade"]}}</td>
+            <td>{{res["work"]}}</td>
+        </tr>
+        {% endfor %}
+       </tbody>
+       </table>
+       <div>
+        <a href="{{url_for('form')}}"class ="btn btn-warning pull right">HOME</a>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
+<script>
+    
+    $(document).ready (function(){
+     $(".alert").hide(3000)
+                
+     });      
+  </script>

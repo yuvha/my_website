@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome page</title>
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ 
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+       
+ </head>
+
+<style type="text/css">
+	body{
+		background-color: #f5bcf5;
+	}
+	.container{
+		border: 2px solid black;
+	}
+table,th,td{
+	border: 1px solid black;
+	padding: 10px;
+}
+button {
+      background-color: #c72ee5;
+      color: #f7f5f5;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+button a
+{    
+	color: #fdfdfc;
+	list-style: none;
+	text-decoration: none;
+}
+    button:hover {
+      color:#fdfdfc;
+    }
+	.container .g20 
+	{
+	
+		display: flex;
+		
+			
+	}
+	
+	.lion{
+		float:right;
+		
+	}
+	.container .head h1{
+		text-align: center;
+		margin: 20px;
+	}
+	footer{
+		text-align: center;
+		padding: auto;
+	}
+</style>
+
+
+<body>
+
+
+	<div class="container">
+	      <div class="head">
+			<div class="lion">
+			<img src="" width="200px"/>
+			</div>
+			<div class="g20">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/G20_India_2023_logo.svg/2560px-G20_India_2023_logo.svg.png"width="150px"/>
+				</div>  
+				<div class="head">
+			<h1>Welcome to the Government Recruitment Portal</h1>
+			</div>
+				
+				<hr>
+				{% with messages = get_flashed_messages(with_categories=true) %}
+				{% if messages %}
+		
+					{% for category, message in messages %}
+						<div class="alert alert-{{category}}">{{ message }}</div>
+					{% endfor %}
+		
+				{% endif %}
+		   
+		 {% endwith %}
+		 <button><a href="{{url_for('form')}}">Back to home page </a></button>
+
+	      	 <table style="width: 100%">
+	      	 <tr>
+	      	 <th><h1>About the portal</h1></th>
+	      	 <th>Features Available to Applicants</th>
+	      	</tr>
+	      	<tr>
+	      		<td>The online portal for Government recruitment is to faciliate<br> the conduct of recruiment by various departments of the government <br>of puducherry by calling for online applications.this software <br>is owned and managed by the department of personnel and Administrative Reforms(Exam cell),puducherry.</td>
+	      		<td>
+	      			<ol>
+	      				<li>read e online portal for Government recruitment is to faciliate the conduct of recruiment by var</li>
+	      				<li>read line applications.this software is owned and managed by the department of personnel and Administrative Reforms(Exam cell),p</li>
+	      				<li>read line applications.this software is owned and managed by the department of personnel and Administrative Reforms(Exam cell),p</li>
+	      				<li>read line applications.this software is owned and managed by the department of personnel and Administrative Reforms(Exam cell),p</li>
+	      				<li>read line applications.this software is owned and managed by the department of personnel and Administrative Reforms(Exam cell),p</li>
+	      				<li>read line applications.this software is owned and managed by the department of personnel and Administrative Reforms(Exam cell),p</li>
+	      				
+	      			</ol>
+	      		</td>
+
+
+	      	</table>
+	      </div>
+	      <br><br>
+	       <table style="width: 100%">
+	       	<tr>
+	       		<th>Name of the Recruiements</th>
+	       		<th>Name of the department/Institusion</th>
+	       		<th>Application Open Time</th>
+	       		<th>Application Close Time</th>
+	       	</tr>
+	       	<tr>
+	       		<td><a href="{{url_for('register',id='Police')}}">Police Constable</a></td>
+	       		<td>POLICE DEPARTMENT</td>
+	       		<td>30-10-2023 10:00:00</td>
+	       		<td>29-11-2023 17:45:00</td>
+	      	 </tr>
+	      	 <tr>
+	      	 	<td><a href="{{url_for('register',id='Bank')}}">Bank Manager</a></td>
+	      	 	<td>BANK DEPARTMENT</td>
+	       		<td>30-10-2023 10:00:00</td>
+	       		<td>29-11-2023 17:45:00</td>
+	      	 
+	      	 </tr>
+	      	 <tr><td><a href="{{url_for('register',id='Railway')}}">Railway Officer</a></td>
+	      	 	<td>RAILWAY DEPARTMENT</td>
+	       		<td>30-10-2023 10:00:00</td>
+	       		<td>29-11-2023 17:45:00</td>
+	      	 	</tr>
+	      	 	<tr><td><a href="{{url_for('register',id='Clerk')}}">Clerk Post</a></td>
+	      	 		<td>AGRICULTURE DEPARTMENT</td>
+	       		<td>30-10-2023 10:00:00</td>
+	       		<td>29-11-2023 17:45:00</td>
+	      	 </tr>
+	      	 <tr><td><a href="{{url_for('register',id='Teacher')}}">Admin Officer</a></td>
+	      	 	<td> DEPARTMENT</td>
+	       		<td>30-10-2023 10:00:00</td>
+	       		<td>29-11-2023 17:45:00</td>
+	      	 </tr>
+	      	 </table>
+	     
+
+
+
+
+	</div>
+	<footer>
+		<p>&copy; 2023 Government Job Portal. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>
+<script>
+    
+    $(document).ready (function(){
+     $(".alert").hide(3000)
+                
+     });      
+  </script>

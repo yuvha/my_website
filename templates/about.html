@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>About Government Job Portal</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #eebbef;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #e5a1e7;
+    color: #fff;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Government Job Portal</h1>
+        <nav>
+            <a href="{{url_for('form')}}"class ="btn btn-warning pull right">Go to Home</a>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p>Welcome to the Government Job Portal, your go-to destination for finding and applying for government job opportunities. Our mission is to connect talented individuals with rewarding careers in public service.</p>
+
+        <h3>Our Vision</h3>
+        <p>We envision a transparent and accessible platform that simplifies the process of job hunting for government positions. Our goal is to empower both job seekers and government organizations by facilitating a seamless recruitment process.</p>
+
+        <h3>Why Choose Government Job Portal?</h3>
+        <ul>
+            <li>Comprehensive Job Listings: Access a wide range of government job opportunities from various departments and sectors.</li>
+            <li>User-Friendly Interface: Our portal is designed to provide a user-friendly experience, making it easy for you to find and apply for jobs.</li>
+            <li>Job Alerts: Stay informed about the latest job openings with our personalized job alert system.</li>
+            <!-- Add more key features as needed -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Government Job Portal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

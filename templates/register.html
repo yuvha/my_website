@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Job Portal Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5d6f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #da8dda;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #f1b9f1;
+      border-radius: 4px;
+    }
+    input{
+      background-color: #f5bcf5;
+    }
+    select{
+      background-color: #f5bcf5;
+    }
+    textarea{
+      background-color: #f5bcf5;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Job application</h2>
+    <form action="/register" method="POST">
+
+      <!-- Personal Information -->
+      <label >Full Name:</label>
+      <input type="text" name="fname" required>
+
+      <label >Position Applying For:</label>
+      <select id="position" name="pos" required>
+        <option value="" disabled selected>Select Position</option>
+        <option value="developer">Police Constable</option>
+        <option value="designer">Bank Manager</option>
+        <option value="manager">Railway Officer</option>
+        <option value="manager">Clerk Post</option>
+        <option value="manager">Admin Officer</option>
+      </select>        
+
+      <label >Address:</label>
+      <textarea  name="address" rows="4" required></textarea>
+
+      <label >Date of Birth:</label>
+      <input type="date"  name="dob" required>
+
+      <!-- Education Informtion -->
+      <label >Highest Education Level:</label>
+      <select  name="edu" required>
+        <option value="" disabled selected>Select Education Level</option>
+        <option value="highSchool">High School</option>
+        <option value="college">College</option>
+        <option value="bachelor">Bachelor's Degree</option>
+        <option value="master">Master's Degree</option>
+        <option value="phd">Ph.D.</option>
+      </select>
+
+      <label >Institution Name:</label>
+      <input type="text"  name="inst" required>
+
+      <label >Year of Graduation:</label>
+      <input type="number" name="grade" required>
+
+      <!-- Work Experience -->
+      <label >Years of Work Experience:</label>
+      <input type="number"  name="work" required>
+
+   <!--   <label for="resume">Resume (PDF or Word):</label>
+      <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+      <label for="sign">Signature (PDF or Word):</label>
+      <input type="file" id="sign" name="sign" accept=".pdf, .doc, .docx" required> -->
+    
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+</body>
+</html>
